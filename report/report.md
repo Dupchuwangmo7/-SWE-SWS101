@@ -35,6 +35,7 @@ To start with, I tried breaking into port number 80 which is http port. To break
 
 
 Run the msfconsole to use metasploit.
+
 ![1st step](<../Vulnversity/Evidences/80/Pasted image 1.png>)
 
 I search for php_cgi using a command `search php_cgi` because  it is a specification “protocol” for transferring information between a Web server and a CGI program. A CGI program is any program designed to accept and return data that conforms to the CGI specification.
@@ -55,6 +56,7 @@ Here, I can see that RHOST AND LHOST are not set yet. So I am going to set RHOST
 ![5th step](<../Vulnversity/Evidences/80/Screenshot from 2024-05-01 22-32-05.png>)
 
 Then I ran the command <exploit > to check if this method works or not. And yes it worked and I was able to gain root access to the server.
+
 ![6th step](<../Vulnversity/Evidences/80/Screenshot from 2024-05-01 22-32-52.png>)
 
 ![6th step](<../Vulnversity/Evidences/80/Screenshot from 2024-05-01 22-33-14.png>)
@@ -74,6 +76,7 @@ I search for vnc with command `search vnc `
 
 
 Here I can find lots of modules. I went through these modules and came across module number 109 which will help me gain access in a quicker way.  So I used that module.
+
 ![alt text](<../Vulnversity/Evidences/5900/Screenshot from 2024-05-04 01-24-42.png>)
 
 I search for options inside this module
@@ -86,9 +89,11 @@ And i did setups like seting RHOSTS to target and making the search when it user
 ![alt text](<../Vulnversity/Evidences/5900/Screenshot from 2024-05-05 21-13-54.png>)
 
 And after setuos I ran it.
+
 ![alt text](<../Vulnversity/Evidences/5900/Screenshot from 2024-05-05 21-14-14.png>)
 
-Now, to view the virtual machine 
+Now, to view the virtual machine.
+
 ![alt text](<../Vulnversity/Evidences/5900/Screenshot from 2024-05-04 01-27-23.png>)
 
 ![alt text](<../Vulnversity/Evidences/5900/Screenshot from 2024-05-04 01-27-41.png>)
@@ -100,12 +105,15 @@ The next port I tried was TCP/6667 is an IRC port, which is often used to contro
 ![alt text](<../Vulnversity/Evidences/6667/Screenshot from 2024-05-04 17-23-37.png>)
 
 Now, I will use `search unreal` to search modules.
+
 ![alt text](<../Vulnversity/Evidences/6667/Screenshot from 2024-05-04 17-23-49.png>)
 
 Here, I have found 5 different modules but i will use last one because it is easy to break in.
+
 ![alt text](<../Vulnversity/Evidences/6667/Screenshot from 2024-05-04 17-24-05.png>)
 
-To find out about options this module offers 
+To find out about options this module offers.
+
 ![alt text](<../Vulnversity/Evidences/6667/Screenshot from 2024-05-04 17-24-18.png>)
 
 It gives us options to set RHOSTS which is the target ip address. So I will set my target ip address. 
@@ -121,7 +129,8 @@ I will set payload in such that it will break the ruby because Ruby on Rails can
 
 ![alt text](<../Vulnversity/Evidences/6667/Screenshot from 2024-05-04 17-25-50.png>)
 
-To check if this is ready to exploit 
+To check if this is ready to exploit.
+
 ![alt text](<../Vulnversity/Evidences/6667/Screenshot from 2024-05-04 17-26-05.png>)
 
 We see that our target ip address is set and it is ready to exploit.
@@ -199,7 +208,8 @@ I will set RHOSTS with the ip address of target, lport as 80 and lhost as my cur
 
 ![alt text](<../Vulnversity/Evidences/postgres/Screenshot from 2024-05-05 22-12-07.png>)
 
-Now that setups are done I will exploit 
+Now that setups are done I will exploit.
+
 ![alt text](<../Vulnversity/Evidences/postgres/Screenshot from 2024-05-05 22-14-10.png>)
 
 So, I can gain unauthorized access to the database server and I can even view all the data inside it and i can also touch new files. 
