@@ -1,0 +1,4 @@
+Here, we are going to use server-side injection like we used in basic 8 and they have given us a file where the password is saved but this time level doesn't have any input box to pass down the command. That’s why we are going to use basic8 to proceed further.
+
+
+Command : `<!--#exec cmd="ls /var/www/hackthissite.org/html/missions/basic/9/ `
